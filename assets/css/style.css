@@ -1,0 +1,522 @@
+:root {
+    --primary: #8B5A2B;
+    --secondary: #F5E7D5;
+    --accent: #D4A76A;
+    --text: #333333;
+    --light: #FFFFFF;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --error: #E74C3C;
+    --success: #2ECC71;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background-color: var(--secondary);
+    line-height: 1.6;
+}
+main {
+    background-image: url('assets/image/bg-image.jpg'); /* Ganti dengan path gambar yang diinginkan */
+    background-size: cover; /* Gambar akan menutupi seluruh bagian */
+    background-position: center; /* Gambar akan diposisikan di tengah bagian */
+    background-attachment: fixed; /* Membuat background tetap saat di-scroll */
+}
+
+/* Styling untuk section Hubungi Kami */
+.contact-us-full {
+    background-color: #414141;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-us-full h2 {
+    font-size: 2rem; /* Ukuran font untuk judul */
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #e6e6e6;
+}
+
+.contact-us-full p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #efefef;
+}
+
+.contact-us-full ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-us-full ul li {
+    font-size: 1.2rem; /* Ukuran font untuk kontak */
+    margin: 10px 0;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling icon dengan Font Awesome */
+.contact-us-full ul li i {
+    font-size: 1.5rem; /* Ukuran icon */
+    color: #5C6BC0; /* Warna icon */
+}
+
+/* Link styling */
+.contact-us-full ul li a {
+    text-decoration: none;
+    color: #5C6BC0;
+    font-weight: 600;
+}
+
+.contact-us-full ul li a:hover {
+    color: #3f51b5;
+    text-decoration: underline;
+}
+
+/* Responsif untuk ukuran layar kecil */
+@media (max-width: 768px) {
+    .contact-us-full h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-us-full p {
+        font-size: 1rem;
+    }
+
+    .contact-us-full ul li {
+        font-size: 1rem;
+    }
+
+    .contact-us-full ul li i {
+        font-size: 1.3rem; /* Mengurangi ukuran icon di perangkat kecil */
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('assets/image/bg-image.jpg'); /* Ganti dengan path gambar yang diinginkan */
+    background-size: cover; /* Gambar akan menutupi seluruh bagian .container */
+    background-position: center; /* Gambar akan diposisikan di tengah bagian .container */
+    background-attachment: fixed
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #555; /* opsional: warna teks */
+}
+
+header {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path fill="%23D4A76A" fill-opacity="0.2" d="M30,10 Q50,5 70,10 T90,30 Q95,50 90,70 T70,90 Q50,95 30,90 T10,70 Q5,50 10,30 T30,10Z"/></svg>');
+    opacity: 0.3;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Gallery */
+.gallery {
+    margin-bottom: 40px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product {
+    background-color: var(--light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product h3 {
+    padding: 0 15px;
+}
+
+.product p {
+    padding: 0 15px 15px;
+    color: #666;
+}
+
+/* Login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.login-box {
+    background-color: var(--light);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Forms */
+.form-container {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+}
+.back-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7a4c24;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-icon:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.prefix-inside {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #555;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.rupiah-input {
+    padding-left: 35px;
+    text-align: left;
+    direction: ltr;
+}
+
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead tr {
+    background-color: var(--primary);
+    color: var(--light);
+    text-align: left;
+    font-weight: 600;
+}
+
+th, td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary);
+}
+
+tbody tr:hover {
+    background-color: var(--secondary);
+    font-weight: 500;
+}
+\.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* opsional, agar tabel tidak mengecil berantakan */
+}
+
+#sales-table th,
+#sales-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+    #sales-table th,
+    #sales-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-primary:hover {
+    background-color: #7a4c24;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    background-color: #c99552;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-admin {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+.btn-logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+.btn-edit {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.btn-delete {
+    background-color: var(--error);
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+/* Admin */
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.report-container {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.rupiah-input {
+    text-align: right;
+    padding-right: 30px !important;
+}
+
+/* Tambahan media query untuk tablet */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
